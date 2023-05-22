@@ -1,6 +1,6 @@
 {
   "name": "json-version-control",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "json version control to manage your json file versions efficiently and fast",
   "main": "index.js",
   "scripts": {
