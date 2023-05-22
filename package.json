@@ -1,0 +1,23 @@
+{
+  "name": "json-version-control",
+  "version": "1.0.0",
+  "description": "json version control to manage your json file versions efficiently and fast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "version",
+    "control",
+    "diff",
+    "jsondiffpatch",
+    "history"
+  ],
+  "author": "Deekshant Malvi",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "jsondiffpatch": "^0.4.1"
+  }
+}
