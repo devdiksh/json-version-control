@@ -52,7 +52,7 @@ For detailed information about each method and its usage, please refer to the so
 Here's an example that demonstrates how to use the json-version-control package:
 
 ```javascript
-const { VersionControl } = require('json-version-control');
+const VersionControl = require('json-version-control');
 
 // Initialize the VersionControl instance with the configuration
 const config = {
