@@ -1,19 +1,30 @@
 {
   "name": "json-version-control",
   "version": "1.1.0",
-  "description": "json version control to manage your json file versions efficiently and fast",
+  "description": "A lightweight and easy-to-use package that provides version control functionality for JSON files.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "json",
-    "version",
-    "control",
-    "diff",
-    "jsondiffpatch",
-    "history"
+    "version control",
+    "versioning",
+    "history tracking",
+    "data management",
+    "diffs",
+    "revert",
+    "apply versions",
+    "lightweight",
+    "easy-to-use",
+    "json-diff",
+    "json-diff-patch",
+    "jsondiffpatch"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devdiksh/json-version-control"
+  },
   "author": "Deekshant Malvi",
   "license": "ISC",
   "dependencies": {
