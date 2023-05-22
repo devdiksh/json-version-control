@@ -17,13 +17,19 @@ class VersionControl {
     this.diffFilePrefix = config.diffFilePrefix;
 
     // Ensure the history directory exists
-    if (!fs.existsSync(this.historyDirectory)) {
-      fs.mkdirSync(this.historyDirectory);
+    try {
+      fs.mkdirSync(this.historyDirectory, { recursive: true });
+    } catch (err) {
+      console.error(`Error creating history directory: ${err}`);
     }
 
     // Create an empty head.json file if it doesn't exist
     if (!fs.existsSync(this.headFilePath)) {
-      this.writeJsonFile(this.headFilePath, {});
+      try {
+        fs.writeFileSync(this.headFilePath, "{}");
+      } catch (err) {
+        console.error(`Error creating head file: ${err}`);
+      }
     }
   }
 

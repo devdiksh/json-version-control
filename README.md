@@ -64,15 +64,23 @@ const config = {
 
 const vc = new VersionControl(config);
 
-// Save a new version
-const newData = { name: 'John Doe', age: 30 };
-vc.saveNewVersion(newData);
+// Save a new version - Version 1
+const dataV1 = { name: 'John Doe', age: 30 };
+vc.saveNewVersion(dataV1);
+
+// Save a new version - Version 2
+const dataV2 = { name: 'John Doe', age: 35 };
+vc.saveNewVersion(dataV2);
+
+// Save a new version - Version 3
+const dataV3 = { name: 'John Smith', age: 35 };
+vc.saveNewVersion(dataV3);
 
 // Get the list of available history versions
 const historyVersions = vc.getHistoryVersions();
 console.log('History Versions:', historyVersions);
 
-// Revert to a previous version
+// Revert to a previous version - Revert to Version 2
 const previousVersion = vc.getPreviousVersion();
 if (previousVersion) {
   vc.applyVersionToSource(previousVersion);
@@ -81,7 +89,7 @@ if (previousVersion) {
   console.log('No previous version found.');
 }
 
-// Apply the next version
+// Apply the next version - Apply Version 3
 const nextVersion = vc.getNextVersion();
 if (nextVersion) {
   vc.applyVersionToSource(nextVersion);
@@ -89,6 +97,23 @@ if (nextVersion) {
 } else {
   console.log('No next version found.');
 }
+
+// Get the source object from the initial version
+const initialVersion = vc.getInitialVersion();
+console.log('Source object from the initial version:', initialVersion);
+
+// Get the source object from the latest version
+const latestVersion = vc.getLatestVersion();
+console.log('Source object from the latest version:', latestVersion);
+
+// Apply the initial version
+vc.applyInitialVersion();
+console.log('Applied the initial version.');
+
+// Apply the latest version
+vc.applyLatestVersion();
+console.log('Applied the latest version.');
+
 ```
 ## License
 
