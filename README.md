@@ -8,6 +8,7 @@ json-version-control is a lightweight package that provides version control func
 - Track changes between versions using diffs
 - Revert to previous versions
 - Apply specific versions to update the JSON data
+- Asynchronous version control operations with VersionControlAsync
 
 ## Installation
 
@@ -52,9 +53,9 @@ For detailed information about each method and its usage, please refer to the so
 Here's an example that demonstrates how to use the json-version-control package:
 
 ```javascript
-const VersionControl = require('json-version-control');
+const { VersionControlSync } = require('json-version-control');
 
-// Initialize the VersionControl instance with the configuration
+// Initialize the VersionControlSync instance with the configuration
 const config = {
   sourceFilePath: './data/source.json',
   headFilePath: './data/head.json',
@@ -62,7 +63,7 @@ const config = {
   diffFilePrefix: 'diff_',
 };
 
-const vc = new VersionControl(config);
+const vc = new VersionControlSync(config);
 
 // Save a new version - Version 1
 const dataV1 = { name: 'John Doe', age: 30 };
