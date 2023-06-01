@@ -94,7 +94,7 @@ class VersionControl {
    */
   getHistoryVersions() {
     const fileNames = fs.readdirSync(this.historyDirectory);
-    const versionRegex = new RegExp(`^${this.diffFilePrefix}(\\d+)\\.diff$`);
+    const versionRegex = new RegExp('(\\d+).diff$');
     const versions = [];
 
     for (const fileName of fileNames) {

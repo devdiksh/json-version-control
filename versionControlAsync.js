@@ -183,7 +183,7 @@ class VersionControlAsync {
   async getHistoryVersions() {
     try {
       const fileNames = await this.readdirAsync(this.historyDirectory);
-      const versionRegex = new RegExp(`^${this.diffFilePrefix}(\\d+)\\.diff$`);
+      const versionRegex = new RegExp('(\\d+).diff$');
       const versions = [];
 
       for (const fileName of fileNames) {
